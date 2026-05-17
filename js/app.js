@@ -330,7 +330,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
-        setStatus('元動画を再保存する（範囲・クロップは未適用）');
+        setStatus('元動画を再保存');
     });
 
     // disabled / is-cancel 状態を元ボタンから同期
@@ -350,7 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
         [headerFileBtn,    '動画ファイルを選択します', null],
         [headerExtractBtn, '範囲抽出: 設定した間隔でフレームを抽出します', 'キャンセル: 抽出を中断します'],
         [headerStitchBtn,  '縦結合: 選択中の画像を縦に並べて保存します', null],
-        [headerSaveZipBtn, '元動画を再保存する（範囲・クロップは未適用）', null],
+        [headerSaveZipBtn, '元動画を再保存（範囲・クロップ未適用）', null],
         [reloadBtnEl,      'リロード: アプリをリセットします（抽出データが消えます）', null],
     ];
     tooltips.forEach(([btn, desc, cancelDesc]) => {
