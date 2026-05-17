@@ -259,7 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         stitchBtn.disabled = true;
         try {
-            await stitchProcessor.stitch(frames, currentVideoFileName, setStatus);
+            const prepared = await prepareFramesForExport(frames);
+            await stitchProcessor.stitch(prepared, currentVideoFileName, setStatus);
         } finally {
             updateSaveButtons();
         }
